@@ -13,8 +13,8 @@
     "sass": "sass components/sass:components/tmpcss --watch --sourcemap=auto",
     "sass:build": "sass components/sass:components/tmpcss --style compressed --update --force --sourcemap=none",
     "reload": "browser-sync start --proxy 'motivaction.dev' --files 'dist/admin, dist/js, dist/css, dist/img' --reloadDelay 400",
-    "clear": "rm -rf dist/js dist/css components/tmpcss && mkdir dist/css && mkdir dist/js",
-    "build": "npm run sass:build && npm run prefixes:build & npm run babel:build",
+    "clean": "rm -rf dist/js dist/css components/tmpcss && mkdir dist/css && mkdir dist/js",
+    "build": "npm run clean && npm run sass:build && npm run prefixes:build & npm run babel:build",
     "start": "npm run sass & npm run prefixes & npm run babel & npm run reload"
   },
   "author": "Craig Creeger",

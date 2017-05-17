@@ -57,7 +57,8 @@ echo '<tr>' . PHP_EOL .
     ?>
             </table>
             <h2>Source Code</h2>
-<p>All the source code for this application can be <a href="eLearningFramework.zip">downloaded from this page.</a></p>
+<p>All the source code can be found at <a href="https://github.com/Craig-Creeger/eLearningFramework" target="_blank">
+https://github.com/Craig-Creeger/eLearningFramework</a></p>
         </div>
     </div>
         <footer>Demo Course — All rights reserved / Craig Creeger / 2015
