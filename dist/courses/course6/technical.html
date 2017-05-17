@@ -1,0 +1,19 @@
+<h1>Technical Details</h1>
+<div class="pushRight callout">
+    <h1>Programming Philosophy</h1>
+    <p>One makes several design decisions when architecting a new application. Factors to consider are application performance (speed), how long it will take to deliver, ease of future maintenance, etc.</p>
+    <p>For this particular project I wanted to use common tools and keep the code simple because this framework will definitely be used again, and potentially a different programmmer will have to read and understand the code.</p>
+    <p>I am a big proponent of keeping things as simple as possible for the reasons listed above. That is why I chose npm over Grunt or Gulp. It is also why I feel ES6 syntax is better than CoffesScript or TypeScript.</p>
+    <p><em>Side note:</em> The <a href="http://www.catb.org/esr/writings/taoup/html/ch01s06.html" target="_blank">17 rules of Unix</a> make a lot of sense to me and I strive to achieve that same level in my programs.</p>
+</div>
+<h2>Overview</h2>
+<p>PHP, Javascript, and MySQL are the primary technologies used in this eLearning framework. PHP Classes and MySQL handle the Models. Javascript handles the navigation, interactions, and Views/Controller.</p>
+<h3>PHP and MySQL</h3>
+<p>The PHP code is all object-oriented.</p>
+<p>The database uses referential integrity to ensure that the data will be as clean as possible.</p>
+<h3>ES6/Javascript</h3>
+<p>The Javascript was written in EcmaScript 2015 (ES6) and transpiled to ES5 via Babel.</p>
+<h3>SASS/CSS</h3>
+<p>The CSS was written in SASS syntax that was compiled to CSS using the SASS CLI.</p>
+<h2>Build System</h2>
+<p>I have used Grunt in the past, but ultimately decided to use Node’s <code>npm</code> scripts for this project after reading <a href="http://blog.keithcirkel.co.uk/how-to-use-npm-as-a-build-tool/" target="_blank">How to Use npm as a Build Tool</a> and <a href="http://www.sitepoint.com/guide-to-npm-as-a-build-tool/" target="_blank">Give Grunt the Boot! A Guide to Using npm as a Build Tool</a>.</p>

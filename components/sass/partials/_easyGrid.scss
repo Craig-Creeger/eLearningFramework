@@ -1,0 +1,85 @@
+/* ==========================
+   Grid Layout - Mobile first
+   ========================== */
+//Breakpoints
+//narrow is 1 to 599 [default assumption]
+.grid {
+    display: block;
+}
+.grid.reverse {
+    direction: rtl;
+}
+.row {
+    display: block;
+}
+.column {
+    /* Should be no top/bottom margin/padding on these elements because if they have no content, then they should take up no extra space. */
+    display: block;
+    padding: 0 1em;
+    box-sizing: border-box;
+    direction: ltr;
+}
+.column >:first-child {
+    margin-top: 0;
+}
+.third {
+    width: 100%;
+}
+.quarter {
+    width: 100%;
+}
+.snakingColumns3,
+.snakingColumns4 {
+    column-count: auto;
+}
+.snakeItem {
+    /* For example:
+    <div class="snakingColumns3">
+      <p class="snakeItem">This is my first item.</p>
+      <p class="snakeItem">This is my second item.</p>
+    </div>
+  The class snakeItem is not required, but it can help to keep longer items from splitting across columns.
+  */
+    display: inline-block;
+}
+
+/* Medium width (tablets in portrait) */
+@media screen and (min-width: $medium) {
+    /* Snaking Columns works well for a list of things where the items are very short words/phrases.
+     Otherwise, there is a strong potential for an item to get split across columns. */
+    .snakingColumns3 {
+        column-count: 3;
+    }
+    .snakingColumns4 {
+        column-count: 4;
+    }
+    .grid.responsiveImg {
+        table-layout: fixed;
+    }
+    .grid {
+        display: table;
+        width: 100%;
+        margin: 0;
+    }
+    .row {
+        display: table-row;
+    }
+    .column {
+        display: table-cell;
+        vertical-align: top;
+        padding-left: 1.5em;
+        padding-right: 1.5em;
+    }
+    .column >:first-child {
+        margin-top: 0;
+    }
+    .half {
+        width: 50%;
+    }
+    .third {
+        width: 33%;
+    }
+    .quarter {
+        width: 25%;
+    }
+}

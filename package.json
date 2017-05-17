@@ -1,0 +1,26 @@
+{
+  "name": "eLearningFramework",
+  "version": "1.0.0",
+  "description": "Test npm Build",
+  "main": "index.php",
+  "scripts": {
+    "//": "env will show all your environment variables.",
+    "env": "env",
+    "babel": "babel components/es6/ --out-dir dist/js/ --watch",
+    "babel:build": "babel components/es6/ --out-dir dist/js/",
+    "prefixes": "postcss --autoprefixer.browsers 'last 2 version' -w -u autoprefixer -d dist/css components/tmpcss/*.css",
+    "prefixes:build": "postcss --autoprefixer.browsers 'last 2 version' -u autoprefixer -d dist/css components/tmpcss/*.css",
+    "sass": "sass components/sass:components/tmpcss --watch --sourcemap=auto",
+    "sass:build": "sass components/sass:components/tmpcss --style compressed --update --force --sourcemap=none",
+    "reload": "browser-sync start --proxy 'motivaction.dev' --files 'dist/admin, dist/js, dist/css, dist/img' --reloadDelay 400",
+    "clear": "rm -rf dist/js dist/css components/tmpcss && mkdir dist/css && mkdir dist/js",
+    "build": "npm run sass:build && npm run prefixes:build & npm run babel:build",
+    "start": "npm run sass & npm run prefixes & npm run babel & npm run reload"
+  },
+  "author": "Craig Creeger",
+  "license": "ISC",
+  "devDependencies": {},
+  "dependencies": {
+    "jquery": "^2.1.4"
+  }
+}

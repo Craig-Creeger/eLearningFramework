@@ -1,0 +1,20 @@
+@charset "UTF-8";
+
+@import 'partials/normalize';
+@import 'partials/colorsVariables';
+@import 'partials/typography';
+@import 'partials/structureLayout';
+@import 'partials/elementsMisc';
+
+//This website's styles are coded here.
+header {
+    padding: 1em 2em;
+}
+main {
+    padding: 2em;
+}
+header h1, header h2 {
+    color: $lightAccent;
+}
+//End this website.
+@import 'partials/helpers';

@@ -1,0 +1,23 @@
+{
+  "name": "motivaction2015",
+  "version": "1.0.0",
+  "authors": [
+    "Craig Creeger <craig@pixelpro.biz>"
+  ],
+  "description": "eLearning course",
+  "main": "index.php",
+  "moduleType": [
+    "globals"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "swfobject": "*"
+  }
+}

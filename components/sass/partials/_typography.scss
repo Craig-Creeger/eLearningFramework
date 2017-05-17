@@ -1,0 +1,86 @@
+body {
+	font-family: 'Alegreya Sans', sans-serif;
+    font-weight: normal;
+	font-size:100%;  /* Mobile-first, so start small. 93.75% is typical. */
+	line-height:1.4;
+	color:$darkPrimary;
+    background-color: $lightPrimary;
+
+	@media screen and (min-width: $medium) {
+		font-size:112.5%;
+	}
+}
+//These three are from HTML5 Boilerplate.
+hr {display: block;height: 1px;border: 0;border-top: 1px solid $darkSecondary;margin: 1em 0;padding: 0;}
+audio,canvas,iframe,img,svg,video {vertical-align: middle;}
+textarea {resize: vertical;}
+/* =======================
+   Typography
+   ======================= */
+h1, h2, h3, h4, h5 {
+	font-weight:bold;
+	margin-bottom:0.4em; /* Helps with graphic design principle of Proximity. i.e. Pull the header closer to the following content. */
+}
+h1, h2 {
+  color: $darkSecondary;
+}
+h1 {
+	font-size:2.5em;
+}
+h2 {
+	font-size:1.8em;
+}
+h3 {
+	font-size:1.4em;
+	font-variant: normal;
+	color:$darkAccent;
+}
+h4 {
+	font-size:1.2em;
+	font-weight:normal;
+	padding-left:2em;
+}
+h1 a, h2 a, h3 a, h4 a { /* Links inside headers should be the same color as the header. Also, don't underline them... */
+	color:inherit;
+	text-decoration: none;
+}
+h1 a:hover, h2 a:hover, h3 a:hover, h4 a:hover { /* unless they are hovered over. */
+  text-decoration: underline;
+}
+::selection {
+    background-color: $lightAccent;
+    color:$darkPrimary;
+    text-shadow: none;
+}
+dt {
+	font-weight:bold;
+}
+a, summary {
+	color: $link;
+	transition-property:color, background-color;
+	transition-duration:500ms;
+	transition-timing-function: linear;
+	/* Really long URL's can break out of their container, or force horizontal scrollbars.
+	   That is the purpose of the following word-break and hyphen properties.
+	-ms-word-break: break-all;
+     word-break: break-all;
+     word-break: break-word;*/ /* Non standard for webkit */
+}
+a:hover, summary:hover {
+  color:$darkSecondary;
+  background-color:$lightAccent;
+  transition-property:color, background-color;
+  transition-duration:500ms;
+  transition-timing-function: linear;
+}
+a.subtle {
+	text-decoration:none;
+}
+a.subtle:hover {
+	text-decoration:underline;
+}
+h1 code, h2 code, h3 code, h4 code {
+	font-variant: normal;
+	font-weight: normal;
+	font-size:1rem;
+}

@@ -1,0 +1,162 @@
+/****************
+ LISTS
+ ****************/
+ul.horizontal {
+    margin-left: 0;
+    padding-left: 0;
+
+    li {
+        display: inline-block;
+        margin: 0.4em 1em;
+        padding-left: 0;
+    }
+}
+ol > li {
+    margin-top: 1em;
+}
+/****************
+ TABLES
+ ****************/
+ //For when you need some old school layout. :-)
+.layoutTable td {
+    vertical-align: top;
+    padding: 0;
+}
+//Default styling for a real table containing data.
+.dataTable {
+	border-collapse: collapse;
+	margin:1em 0;
+}
+.dataTable thead {
+	background-color:gainsboro;
+	font-weight:bold;
+}
+.dataTable td,
+.dataTable th {
+	border:thin solid black;
+	padding:0 .5em;
+}
+/****************
+ IMAGES
+ ****************/
+.framed {
+    /* puts a border around a element (generally an <img>) */
+    border: 10px solid $darkPrimary;
+}
+.responsiveImg img {
+    display: inline-block;
+    max-width: 100%;
+}
+/****************
+ BUTTONS
+ ****************/
+button,
+.button {
+    /* Style the <button> element, and optionally make <a> or <input submit|button> elements look the same. */
+    text-decoration: none;
+    color: $uiText;
+    display: inline-block;
+    padding: 2px 0.7em;
+    background-color: $uiBkgd;
+    border: thin solid $uiBorder;
+    border-radius: $uiRadius;
+    font-size: 0.875rem;
+    font-weight: normal;
+    line-height: inherit;
+    cursor: pointer;
+    -webkit-appearance: none;
+    font-family: Arial, Helvetica, Verdana, Geneva, sans-serif;
+    box-shadow: 0 0 0 0 white;
+    /* make invisible, but allow for transition during :hover */
+    transition: background-color 500ms, box-shadow 500ms;
+}
+button:hover,
+.button:hover {
+    box-shadow: 0 0 8px 1px dimgray;
+    background-color: white;
+    transition: all 500ms;
+}
+/****************
+ MISC DEFAULTS
+ ****************/
+//WAIT, DUDE, CAN .aspectRatioWrap just use overflow:hidden instead to get a new context.
+
+/* Aspect ratio wrap is a trick used to set the width and height of a box so it's aspect
+   ratio is constant regardless of the width of the container. In other words, this is
+   how you get a responsive video, SWF, etc. (Images don’t need this trick)
+   http://alistapart.com/article/creating-intrinsic-ratios-for-video
+*/
+.aspectRatioWrap {
+    /* You will also need to explicity set the padding-top value on the element you assign
+       this class to OR use the padding default below. */
+    position: relative;
+    padding-top: 69.7917%; //Goofy aspect ratio for a SWF I used once.
+    height: 0;
+    width: 100%;
+}
+.aspectRatioWrap >:first-child { //This usually works, but for an embedded SWF you may need to monkey about with Object and Embed
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+.center {
+    text-align: center;
+}
+.developerNotes {
+	background-color: $lightAccent;
+	color: $darkAccent;
+	font-family: Georgia, "Times New Roman", Times, serif;
+	padding:0.6em;
+	border:2px solid $darkSecondary;
+	border-radius: $uiRadius;
+	width:70%;
+	margin:.5em auto;
+	box-shadow:3px 3px 12px $darkPrimary, -8px -3px $lightSecondary;
+    
+    a { 
+        color:$lightAccent;
+    }
+    li {
+	    margin-left:1em;
+    }
+}
+.developerNotes:before {
+	content:"Developer Notes:";
+	display:block;
+	font-weight:bold;
+	margin-bottom:.5em;
+	color:$darkPrimary;
+	border-bottom:thin solid $darkPrimary;
+}
+.developerNotes:after {
+	content:"--Craig  (555) 555-0457";
+	display:block;
+	padding-left:2em;
+	color:$darkPrimary;
+}
+/* =========================================================
+   AJAX Loading Indicator
+   ========================================================= */
+#loadingIndicator {
+	display:none;
+	position:fixed;
+	width:100%;
+	height:100%;
+	top:0;
+	left:0;
+    //I didn't like the flashing of white so the background has been removed.
+	/* background-color:white;
+	background-color:rgba(255,255,255,.6); */
+}
+#loadingGfx {
+	background-image:url(../img/ajax-loader.gif);
+	width:32px;
+	height:32px;
+	position:fixed;
+	left:50%;
+	top:50%;
+	margin-left:-16px;
+	margin-top:-16px;
+}

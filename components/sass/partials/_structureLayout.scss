@@ -1,0 +1,81 @@
+html {
+    background-color: $lightSecondary;
+}
+body {
+    //The default colors/fonts are in _typography.scss
+    box-sizing: border-box;
+    margin: 0 auto;
+    width:auto;
+    
+    @media screen and (min-width: $medium) {
+        width:90%;
+        max-width: 960px;
+    }
+}
+main {
+    padding:1em 2em;
+}
+header {
+    background-color: $darkSecondary;
+    color: $lightSecondary;
+}
+footer {
+    background-color: $lightPrimary;
+    color: $darkSecondary;
+    padding: 1em 2em;
+    font-size: 0.75rem;
+    margin-top: 2em;
+}
+.pushRight {
+    float: right;
+    margin: 0 0 0.5em 2em;
+    clear: right;
+}
+.pushLeft {
+    float: left;
+    margin: 0 2em 0.5em 0;
+    clear: left;
+}
+.callout {
+    /* Creates a pretty box to put content inside of. */
+    overflow: hidden;
+    /* allows content element's margins to be recognized. */
+    padding: 0 1em;
+    color: $darkSecondary;
+    background-color: $lightSecondary;
+    border: thin solid $darkAccent;
+    border-radius: $uiRadius;
+    width: 75%;
+    margin: 1em auto;
+    
+    &.pushRight, &.pushLeft {
+        margin: 1em auto;
+        float: none;
+    }
+    @media screen and (min-width: $medium) {
+        &.pushRight {
+            float: right;
+            margin-left: 2em;
+            clear: right;
+            width: 45%;
+        }
+    }
+    @media screen and (min-width: $medium) {
+        &.pushLeft {
+            float: left;
+            margin-right: 2em;
+            clear: left;
+            width: 45%;
+        }
+    }
+    h1 {
+        font-size: 2em;
+    }
+    h2 {
+        font-size: 1.4em;
+    }
+}
+p.callout {
+	padding-top: 1em;
+	padding-bottom: 1em;
+}

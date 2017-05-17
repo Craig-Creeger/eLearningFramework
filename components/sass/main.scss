@@ -1,0 +1,33 @@
+@charset "UTF-8";
+
+@import 'partials/normalize';
+@import 'partials/colorsVariables';
+@import 'partials/typography';
+@import 'partials/easyGrid';
+@import 'partials/structureLayout';
+@import 'partials/elementsMisc';
+$footerHeight: 70px;
+@import 'partials/footerStick';
+
+//This website's styles are coded here.
+@import 'partials/eLearning';
+
+footer {
+    border-top:thin solid $darkSecondary;
+    text-align: center;
+    line-height: 35px;
+}
+h1, h2 {
+    color: $darkAccent;
+}
+.error {
+    //Use to style an <output> if error condition.
+    padding: 0.5em 1em;
+    background-color: rgb(255,144,144);
+    color: black;
+}
+#contentPadding {
+    padding:0 1em 0 2em;
+}
+//End this website.
+@import 'partials/helpers';

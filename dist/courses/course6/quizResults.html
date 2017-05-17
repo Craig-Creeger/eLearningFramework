@@ -1,0 +1,25 @@
+<h1>Quiz Results</h1>
+<div id="studentResults"></div>
+<p><a href="courseLauncher.php" class="button">Return to Course Selection</a></p>
+<script>
+    var score = nav.getScore();
+    if (score.score < score.passingScore) {
+        //Try again
+        document.getElementById('studentResults').innerHTML = '<p>You got ' + score.nbrCorrect + ' out of ' + score.totalQuestions + 
+            ', or ' + Number(score.score * 100).toFixed(1) + 
+            '%<br><br>You need ' + Number(score.passingScore * 100).toFixed(0) + '% to pass. Review the material and try again.</p><p><button id="tryAgain">Try Again</button></p>';
+    } else {
+        //Congratulations
+        document.getElementById('studentResults').innerHTML = '<p>You got ' + score.nbrCorrect + ' out of ' + score.totalQuestions + 
+            ', or ' + Number(score.score * 100).toFixed(1) + 
+            '%</p>' +
+            '<h2>Congratulations — You passed this course</h2>';
+    }
+    
+    $('#tryAgain').on('click', function() {
+        nav.reload(4);
+        fetchPage();
+    });
+    
+    writeScoreToLMS();
+</script>

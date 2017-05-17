@@ -1,0 +1,30 @@
+/* You will need to specify a footer height using a
+   variable like this:
+   $footerHeight: 60px;
+*/
+
+html, body {
+	height:100%;
+}
+body {
+	background-color: transparent;
+}
+/*
+   When using footerStick, the <footer> must appear below and outside #footerStickWrap.
+   <header> goes inside it. Also, #footerStickWrap should probably be the first thing
+   after <body>.
+*/
+#footerStickWrap {
+	min-height: 100%;
+	padding-bottom: $footerHeight;
+	overflow: auto;
+	box-sizing: border-box;
+	background-color: $lightPrimary;
+}
+footer {
+	height: $footerHeight;
+	margin-top: $footerHeight * -1;
+	overflow: hidden;
+	-moz-box-sizing:border-box;
+	box-sizing:border-box;
+}

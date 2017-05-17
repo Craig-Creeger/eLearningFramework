@@ -1,0 +1,30 @@
+//Primary page colors
+$lightPrimary: white;
+$darkPrimary: #050505;
+
+//Secondary colors (perhaps a bit drab)
+$lightSecondary: lightgray;
+$darkSecondary: #700000;
+
+//Hot accent colors
+$lightAccent: yellow;
+$darkAccent: #0354bf;
+
+//Hyperlinks (probably best to stick with something close to blue and purple.)
+$link: #000F8F;
+$visited: #400075; //I'm not a big fan of using :visited so all my links typically just use $link.
+
+//User Interface stuff like buttons, scrollbars, etc.
+$uiBkgd: whitesmoke;
+$uiBkgdAlt: gainsboro;
+$uiBorder: dimgray;
+$uiText: black;
+$uiTextAlt: #333;
+$uiRadius: 9px;
+
+//Media Query breakpoints. The site is mobile first so the MQ's are written as "min-width: $..."
+/* 0 to 600 is small (default)
+ * 601 to 1024 is tablets
+ * 1025 and up is monitors */
+$medium: 601px;
+$wide: 1025px;

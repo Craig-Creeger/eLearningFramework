@@ -1,0 +1,7 @@
+<h1>Quiz Results</h1>
+<p>How did you do?</p>
+<p id="studentResults"></p>
+<script>
+    var score = nav.getScore();
+    document.getElementById('studentResults').innerHTML = 'You got ' + score.nbrCorrect + ' out of ' + score.totalQuestions + '. Your percentage is ' + Number(score.score * 100).toFixed(1) + '%';
+</script>
